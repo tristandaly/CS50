@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<style>
+    table
+    {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th
+    {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even)
+    {
+      background-color: #dddddd;
+    }
+
+
+</style>
+    <h1>Table</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Difficulty</th>
+            <th>Food</th>
+        </tr>
+    {% for result in results %}
+        <tr><td>{{result[0]}}</td>
+            <td>{{result[1]}}</td>
+            <td>{{result[2]}}</td>
+            <td>{{result[3]}}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}
+
+<!--Style code courtesy of w3schools --!>

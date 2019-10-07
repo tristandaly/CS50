@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+        <br>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form name="firstForm" action="/form" onsubmit="return FORMVALIDATE()" method ="post">
+        <p>Name: <input type="text" name="Name"> </p><br>
+        <p>Favorite Color: <input type="text"  name="color"> </p><br>
+
+        <p>Difficulty
+            <select value="" name="difficulty">
+                <option value="">--Please choose a difficulty--</option>
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Difficult</option>
+                <option>Rather Difficult</option>
+            </select></p><br><br>
+
+        <p><input class="required" type="radio" name="food" value="pizza" checked required/> Pizza<br>
+        <input class="required" type="radio" name="food" value="hamburger" checked required/> Hamburger<br>
+        <input class="required" type="radio" name="food" value="rice" checked required/> Rice</p>
+
+        <p><button class="btn btn-primary" type="submit">Submit</button></p>
+
+    </form>
+
+    <script>
+    function FORMVALIDATE()
+        {
+            var name = document.forms["firstForm"]["Name"];
+            var color = document.forms["firstForm"]["color"];
+            var difficulty = document.forms["firstForm"]["difficulty"];
+            var food = document.forms["firstForm"]["food"];
+
+            if (name.value == "")
+            {
+                window.alert("What is your name?");
+                name.focus();
+                return false;
+            }
+
+            if (color.value == "")
+            {
+                window.alert("What is your favorite color?");
+                color.focus();
+                return false;
+            }
+
+            if (difficulty.value == "")
+            {
+                window.alert("Choose a difficulty!");
+                difficulty.focus();
+                return false;
+            }
+
+            if (food.value == "")
+            {
+                window.alert("Choose a food!");
+                food.focus();
+                event.preventDefault();
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+{% endblock %}

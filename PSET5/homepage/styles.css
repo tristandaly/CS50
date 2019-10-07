@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+    background-image: url("blueSky.jpeg");
+}
+
+h4 {
+    text-shadow: 3px 2px Gold;
+}
+
+.jumbotron {
+    background-color:Red;
+}

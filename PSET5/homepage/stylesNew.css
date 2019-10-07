@@ -1,0 +1,24 @@
+body{
+    background: black url("space.jpeg") no-repeat fixed center
+}
+
+.headers{
+    width: 320px;
+    padding: 10px;
+    border: 5px inset black;
+    margin: auto;
+    background-color: rgba(48, 100, 93, 0.3);
+}
+
+.hText{
+    color: red;
+    text-align: center;
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+}
+
+.lorem{
+    color: Chartreuse;
+    font-weight: bold;
+    font-family: "Lucida Console";
+}

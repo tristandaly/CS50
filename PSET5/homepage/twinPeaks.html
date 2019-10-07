@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="stylesPeaks.css" rel="stylesheet">
+        <title>Welcome to Twin Peaks!</title>
+        <meta name="viewport" content="device-width, initial-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <img src="pete.gif" alt="There was a Fish in the Percolator">
+        <h2>
+            Twin Peaks is a Miller-Boyett Production, in association with Lorimar Television, and is distributed by Warner Brothers Domestic Television Distribution.
+        </h2>
+<br>
+<br>
+<br>
+<br>
+        <div class="coopPaper">
+            <h4>Agent Cooper's shopping list
+            </h4>
+                <ul class="coopList">
+                    <li>Coffee</li>
+                    <li>Cherry Pie</li>
+                    <li>Fish</li>
+                    <li>Percolator</li>
+                    <li>Donuts</li>
+                    <li>Cassette Tapes</li>
+                    <li>Bird Food</li>
+                    <li>Poker Chips</li>
+                </ul>
+        </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+            <p>"Where am I?"</p>
+
+            <button onclick="getLocation()">???</button>
+
+            <p id="demo"></p>
+
+            <script>
+                var x = document.getElementById("demo");
+
+                function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+}
+
+                function showPosition(position) {
+                    x.innerHTML = "Latitude: " + position.coords.latitude +
+                    "<br>Longitude: " + position.coords.longitude;
+}
+            </script>
+
+        <p>
+            <button onclick="window.location.href = 'index.html';">Turn back time.</button>
+            <button onclick="window.location.href = 'oldIndex.html';">Other paths.</button>
+        </p>
+        <p>
+            <button onclick="window.location.href = 'newIndex.html';">Sign the document why don't ya!</button>
+            <button onclick="window.location.href = 'coolRainbow.html';">Look, just show me a rainbow.</button>
+        </p>
+
+    </body>
+</html>
